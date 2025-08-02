@@ -6,11 +6,13 @@ from agentic.database import get_db_pool
 async def ingest_repo(repo_path: str):
     pool = await get_db_pool()
     async for chunk_info in get_chunks_with_embedding(repo_path):
+        embedding = chunk_info["embedding"]
+        embedding_str = f"[{', '.join(str(x) for x in embedding)}]"
         await pool.execute(
             "INSERT INTO code_chunks (file_path, chunk, embedding) VALUES ($1, $2, $3)",
             chunk_info["file_path"],
             chunk_info["chunk"],
-            chunk_info["embedding"]
+            embedding_str
         )
     await pool.close()
 

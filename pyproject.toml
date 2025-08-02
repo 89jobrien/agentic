@@ -1,0 +1,40 @@
+[project]
+name = "agentic"
+version = "0.1.0"
+description = "A RAG agent using PydanticAI to analyze code repos and suggest improvements"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+license = { text = "MIT" }
+dependencies = [
+    "aioredis>=2.0.1",
+    "asyncpg>=0.30.0",
+    "fastapi[standard]>=0.116.1",
+    "gitpython>=3.1.45",
+    "httpx>=0.28.1",
+    "logfire>=4.0.1",
+    "loguru>=0.7.3",
+    "openai>=1.98.0",
+    "pydantic-ai>=0.4.11",
+    "pyyaml>=6.0.2",
+]
+
+[tool.uv]
+# No special config for UV required. You can add settings here if needed.
+
+[build-system]
+requires = ["uv", "setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 88

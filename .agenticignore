@@ -1,0 +1,41 @@
+# .agenticignore
+# --- Files to Ignore ---
+
+# Ignore specific files
+**/legacy_code.py
+
+# Ignore files by pattern
+*_temp.py
+
+# --- Directories to Ignore ---
+
+tests/
+experimental/
+scripts/
+data/
+notebooks/
+config/
+docs/
+
+#--- File Extensions ---
+# These should be ignored by default but just in case
+
+*.md
+*.yml
+*.pyc
+*.env
+*.lock
+*.log
+*.egg-info
+*.DS_Store
+*.db
+*.sqlite3
+*.sqlite
+*.toml
+*.git
+
+# --- Hidden Directories ---
+__pycache__/
+.github/
+.venv/
+.ruff_cache/

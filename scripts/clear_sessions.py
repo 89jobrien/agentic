@@ -2,6 +2,7 @@ import asyncio
 from agentic.config import Config
 import aioredis
 
+
 async def clear_sessions():
     redis_url = Config.get("redis_url")
     if not redis_url:
@@ -14,6 +15,7 @@ async def clear_sessions():
         await redis.delete(key)
         count += 1
     print(f"Deleted {count} session keys.")
+
 
 if __name__ == "__main__":
     asyncio.run(clear_sessions())

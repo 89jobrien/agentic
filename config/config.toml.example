@@ -1,0 +1,51 @@
+# --------------------------------------------------
+# Agentic Configuration File (TOML Format)
+# --------------------------------------------------
+# Copy this file to 'config.toml' and fill in your values.
+
+# -- Server and API Settings --
+[server]
+host = "0.0.0.0"
+port = 8000
+# A secret key clients must provide in the 'X-API-Key' header.
+# Generate a secure random key for production.
+api_key = "your-secret-api-key"
+
+# -- Logging Settings --
+[logging]
+# Log level can be "DEBUG", "INFO", "WARNING", "ERROR"
+log_level = "INFO"
+log_to_file = true
+log_file_path = "agentic.log"
+
+# -- Database and Session Store Settings --
+[db]
+database_url = "postgresql://user:password@localhost:5432/agentic_db"
+redis_url = "redis://localhost:6379"
+
+# -- Language Model (LLM) and Embedding Settings --
+[llm]
+retriever_top_k = 8
+embedding_dim = 768
+chunk_size = 40
+# Controls creativity vs. factuality of the AI's response (0.0 to 1.0)
+temperature = 0.2
+# Timeout in seconds for external API calls to LLMs.
+request_timeout = 90.0
+
+[llm.ollama]
+url = "http://localhost:11434/api/embeddings"
+embedder_model = "nomic-embed-text"
+
+[llm.azure]
+endpoint = "https://your-resource-name.openai.azure.com/"
+api_key = "your-azure-openai-api-key"
+chat_deployment = "your-chat-deployment-name"
+api_version = "2024-02-15-preview"
+
+# -- RAG Agent Settings --
+[rag]
+system_prompt = "You are an expert AI software developer. Analyze the user's question and the provided code context to give a helpful and accurate answer."
+model = "openai:gpt-4o"
+# Patterns for the ingestor to ignore.
+ingestor_ignore_patterns = [".git/", "tests/", "*.md", "docs/"]

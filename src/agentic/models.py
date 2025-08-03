@@ -12,6 +12,11 @@ class ChatSession(BaseModel):
     messages: List[Message]
 
 
+class Embedding(BaseModel):
+    vector: List[float] | None = None
+
+
 class CodeChunk(BaseModel):
     file_path: str
     chunk: str
+    embedding: Embedding

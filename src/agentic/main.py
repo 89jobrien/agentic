@@ -10,6 +10,7 @@ from agentic.session_store import SessionStore
 from agentic.database import get_db_pool, close_db_pool
 from agentic.logger import setup_logging
 from agentic.api.v1 import general_router, chat_router
+from agentic.conversational_agent import ConversationalAgent
 
 
 setup_logging(config.logging)
@@ -27,6 +28,10 @@ async def lifespan(app: FastAPI):
     # Create and store the RAG agent instance
     app.state.rag_agent = RAGAgent(db_pool=db_pool, config_obj=config)
     logger.info("RAG Agent initialized.")
+
+    # Create and store the ConversationalAgent instance
+    app.state.conversational_agent = ConversationalAgent(config_obj=config)
+    logger.info("Conversational Agent initialized.")
 
     # Create and store the session store
     app.state.session_store = SessionStore(redis_url=config.db.redis_url)

@@ -1,6 +1,6 @@
-from agentic.models import Message
-from agentic.config import AppConfig, config as default_config
-from agentic.chat.azure import azure_chat
+from src.agentic.models import Message
+from src.agentic.config import AppConfig, config as default_config
+from src.agentic.chat.azure import azure_chat
 
 class ConversationalAgent:
     """

@@ -6,9 +6,9 @@ from loguru import logger
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.node_parser import CodeSplitter
 
-from agentic.config import config
-from agentic.utils import read_ignore_file
-from agentic.embeddings.ollama import get_ollama_embedding
+from src.agentic.config import config
+from src.agentic.utils import read_ignore_file
+from src.agentic.embeddings.ollama import get_ollama_embedding
 
 
 class CodeIngestor:

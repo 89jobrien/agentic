@@ -1,7 +1,7 @@
 from fastapi import Request
-from agentic.rag_agent import RAGAgent
-from agentic.session_store import SessionStore
-from agentic.conversational_agent import ConversationalAgent
+from src.agentic.rag_agent import RAGAgent
+from src.agentic.session_store import SessionStore
+from src.agentic.conversational_agent import ConversationalAgent
 
 def get_rag_agent(request: Request) -> RAGAgent:
     """Dependency to get the shared RAGAgent instance."""

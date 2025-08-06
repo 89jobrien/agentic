@@ -29,6 +29,11 @@ dependencies = [
 [tool.uv]
 # No special config for UV required. You can add settings here if needed.
 
+[tool.pytest.ini_options]
+pythonpath = [
+    "src"
+]
+
 [build-system]
 requires = ["uv", "setuptools", "wheel"]
 build-backend = "setuptools.build_meta"

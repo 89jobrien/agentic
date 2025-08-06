@@ -1,5 +1,5 @@
 import httpx
-from agentic.config import config
+from src.agentic.config import config
 
 
 async def azure_chat(messages: list[dict], temperature: float = 0.0) -> str:

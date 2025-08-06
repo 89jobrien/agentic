@@ -2,10 +2,10 @@ import asyncpg
 from typing import Optional
 from loguru import logger
 
-from agentic.embeddings.ollama import get_ollama_embedding
-from agentic.models import Message
-from agentic.config import AppConfig, config as default_config
-from agentic.chat.azure import azure_chat
+from src.agentic.embeddings.ollama import get_ollama_embedding
+from src.agentic.models import Message
+from src.agentic.config import AppConfig, config as default_config
+from src.agentic.chat.azure import azure_chat
 
 
 class RAGAgent:

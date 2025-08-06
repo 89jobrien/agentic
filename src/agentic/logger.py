@@ -1,8 +1,8 @@
 # agentic/logging_setup.py
 import sys
 from loguru import logger
-from agentic.config import LoggingConfig
-from agentic.formatting.console import get_rich_handler
+from src.agentic.config import LoggingConfig
+from src.agentic.formatting.console import get_rich_handler
 
 
 def setup_logging(log_config: LoggingConfig):

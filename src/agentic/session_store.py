@@ -1,6 +1,6 @@
 import aioredis
 import json
-from agentic.models import Message
+from src.agentic.models import Message
 
 
 class SessionStore:

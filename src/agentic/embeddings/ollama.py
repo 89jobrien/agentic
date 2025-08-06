@@ -1,4 +1,4 @@
-from agentic.config import config
+from src.agentic.config import config
 import httpx
 
 

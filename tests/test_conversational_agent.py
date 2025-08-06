@@ -2,7 +2,6 @@ import pytest
 from src.agentic.conversational_agent import ConversationalAgent
 from src.agentic.models import Message
 
-from tests.conftest import patch_azure_chat
 
 @pytest.mark.asyncio
 async def test_conversational_agent_run_chat(patch_azure_chat, patch_config):

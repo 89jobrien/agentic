@@ -29,6 +29,11 @@ dependencies = [
 [tool.uv]
 # No special config for UV required. You can add settings here if needed.
 
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0.0"
+]
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 

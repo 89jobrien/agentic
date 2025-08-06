@@ -1,5 +1,5 @@
 import asyncio
-from agentic.rag_agent import run_rag_query
+from agentic.agents.rag_agent import run_rag_query
 
 
 async def test():

@@ -8,7 +8,7 @@ from rich.table import Table
 from agentic.config import config
 from agentic.models import Message
 from agentic.database import get_db_pool, close_db_pool
-from agentic.rag_agent import RAGAgent
+from agentic.agents.rag_agent import RAGAgent
 from agentic.utils import get_project_name
 
 

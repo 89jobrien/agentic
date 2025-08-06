@@ -16,7 +16,7 @@ from agentic.config import config
 from agentic.embeddings.ollama import get_ollama_embedding
 from agentic.ingestor import CodeIngestor
 from agentic.models import Message
-from agentic.rag_agent import RAGAgent
+from agentic.agents.rag_agent import RAGAgent
 from agentic.utils import get_project_name
 from agentic.formatting import writer
 from agentic.formatting.console import console

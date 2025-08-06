@@ -57,6 +57,7 @@ def mock_db_pool():
     pool = MagicMock()
     pool.fetch = AsyncMock()
     pool.execute = AsyncMock()
+    pool.fetch.return_value = []
     return pool
 
 # --- Redis/session store mock ---

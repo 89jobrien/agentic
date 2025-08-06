@@ -3,36 +3,34 @@ name = "agentic"
 version = "0.1.0"
 description = "A RAG agent using PydanticAI to analyze code repos and suggest improvements"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 authors = [{ name = "Your Name", email = "you@example.com" }]
 license = { text = "MIT" }
 dependencies = [
-    "aioredis>=2.0.1",
-    "asyncpg>=0.30.0",
-    "fastapi[standard]>=0.116.1",
-    "gitpython>=3.1.45",
-    "httpx>=0.28.1",
-    "llama-index-core>=0.13.0",
-    "logfire>=4.0.1",
-    "loguru>=0.7.3",
-    "openai>=1.98.0",
-    "pathspec>=0.12.1",
-    "pgvector>=0.4.1",
-    "pydantic-ai>=0.4.11",
-    "pyyaml>=6.0.2",
-    "redis>=6.2.0",
-    "tomli>=2.2.1",
-    "tree-sitter>=0.25.0",
-    "tree-sitter-language-pack>=0.9.0",
+  "aioredis>=2.0.1",
+  "asyncpg>=0.30.0",
+  "fastapi[standard]>=0.116.1",
+  "gitpython>=3.1.45",
+  "httpx>=0.28.1",
+  "llama-index-core>=0.13.0",
+  "logfire>=4.0.1",
+  "loguru>=0.7.3",
+  "openai>=1.98.0",
+  "pathspec>=0.12.1",
+  "pgvector>=0.4.1",
+  "pydantic-ai>=0.4.11",
+  "pyyaml>=6.0.2",
+  "redis>=6.2.0",
+  "tomli>=2.2.1",
+  "tree-sitter>=0.25.0",
+  "tree-sitter-language-pack>=0.9.0",
 ]
 
 [tool.uv]
 # No special config for UV required. You can add settings here if needed.
 
 [tool.pytest.ini_options]
-pythonpath = [
-    "src"
-]
+pythonpath = ["src"]
 
 [build-system]
 requires = ["uv", "setuptools", "wheel"]

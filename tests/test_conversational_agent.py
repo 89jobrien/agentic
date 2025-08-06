@@ -1,5 +1,5 @@
 import pytest
-from src.agentic.conversational_agent import ConversationalAgent
+from src.agentic.agents.conversational_agent import ConversationalAgent
 from src.agentic.models import Message
 
 

@@ -5,12 +5,12 @@ from fastapi.responses import JSONResponse
 from loguru import logger
 
 from agentic.config import config
-from agentic.rag_agent import RAGAgent
+from agentic.agents.rag_agent import RAGAgent
 from agentic.session_store import SessionStore
 from agentic.database import get_db_pool, close_db_pool
 from agentic.logger import setup_logging
 from agentic.api.v1 import general_router, chat_router
-from agentic.conversational_agent import ConversationalAgent
+from agentic.agents.conversational_agent import ConversationalAgent
 
 
 setup_logging(config.logging)

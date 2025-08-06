@@ -1,5 +1,5 @@
 import pytest
-from src.agentic.rag_agent import RAGAgent
+from src.agentic.agents.rag_agent import RAGAgent
 from src.agentic.models import Message
 
 @pytest.mark.asyncio

@@ -2,11 +2,11 @@ from fastapi import HTTPException, Depends, APIRouter
 from uuid import uuid4
 from loguru import logger
 
-from src.agentic.rag_agent import RAGAgent
+from src.agentic.agents.rag_agent import RAGAgent
 from src.agentic.models import Message, ChatRequest, ChatResponse
 from src.agentic.session_store import SessionStore
 from src.agentic.api.v1.deps import get_rag_agent, get_session_store
-from src.agentic.conversational_agent import ConversationalAgent
+from src.agentic.agents.conversational_agent import ConversationalAgent
 from src.agentic.api.v1.deps import get_conversational_agent
 
 chat_router = APIRouter(tags=["Chat"])

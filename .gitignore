@@ -22,3 +22,8 @@ config.yaml
 config.toml
 
 *.DS_Store
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v3/cache.db
+.aider.tags.cache.v3/cache.db-shm
+/.aider.tags.cache.v3

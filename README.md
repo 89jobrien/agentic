@@ -1,5 +1,5 @@
 # Agentic
-[![pre-commit enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
+
 A Retrieval Augmented Generation (RAG) agent that analyzes code repositories and suggests improvements.
 
 ## Configuration
@@ -77,3 +77,4 @@ Most operational features (ingestion, session management, statistics, reindexing
 ```sh
 python scripts/manage.py --help
 ```
+[![pre-commit enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
